@@ -1,0 +1,39 @@
+# Special Characters
+
+> Headshot
+
+Some of you might have noticed that in order to define a `String` we put our text within double quotes (`"`). But what if the text itself contains double quotes? Something like `Java is a so-called "object-oriented" language`. Well let's try it:
+
+> Live Coding
+
+```java
+class Main {
+ public static void main(String[] args) {
+ String s = "Java is a so-called "object-oriented" language";
+ }
+}
+```
+
+You can see that the color of the string is all messed up and also we can't run the code because we get a syntax error. That's because Java thinks that the string is ended after `so-called` but it isn't and it caused confusion. In order to mitigate this, we need to add a backslash (`\`) before the double quotes inside our string to "escape" them like so:
+
+
+```java
+class Main {
+ public static void main(String[] args) {
+ String s = "Java is a so-called \"object oriented\" language";
+ }
+}
+```
+
+Great! Now our code runs without any problem. Double quote is a special character, one that we need to use `\"` to use inside a string. There are other special characters as well. The backslash itself is written by writing two backslashes like `\\` and the newline character is written as `\n`. Let's see it in action:
+
+```java
+class Main {
+ public static void main(String[] args) {
+ String s = "First line\nSecond line\nThird line!";
+ System.out.println(s);
+ }
+}
+```
+
+Voila!
